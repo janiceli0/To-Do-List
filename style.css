@@ -225,6 +225,10 @@ img.ringbell:hover {
   width: 90%;
 }
 
+.message:hover {
+  box-shadow: 6px 6px 6px 0px rgba(77, 76, 77, 1);
+}
+
 @media only screen and (max-width: 640px) {
   main {
     display: flex;

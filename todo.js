@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
       alert("Alarm set in 5 seconds");
       setTimeout(function () {
         alarm.style.filter = "grayscale(100%)";
+
         alert("Ring Ring Ring");
       }, 4000);
     });
