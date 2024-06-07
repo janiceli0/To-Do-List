@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" defer />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Noto+Sans+Devanagari:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- h1 font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
+      rel="stylesheet"
+    />
+    <title>To-Do List</title>
+  </head>
+  <body>
+    <main>
+      <div class="container1">
+        <h1>To Do List</h1>
+        <div id="taskInput">
+          <label for="task">Task</label><br />
+          <input type="text" id="task" placeholder="Enter your task here..." />
+        </div>
+        <div id="priorityInput">
+          <label for="priority">Priority ( high, Medium, Low )</label><br />
+          <select name="priority" id="priority">
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option></select
+          ><br />
+        </div>
+        <button id="add">Add To List</button>
+      </div>
+
+      <div class="container2"></div>
+    </main>
+    <script src="./todo.js"></script>
+  </body>
+</html>
