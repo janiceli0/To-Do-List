@@ -134,6 +134,10 @@ button#add:hover {
   box-shadow: 9px 9px 14px -3px rgba(0, 0, 0, 1);
 }
 
+.message:hover {
+  box-shadow: 6px 6px 6px 0px rgba(77, 76, 77, 1);
+}
+
 .message p {
   text-align: left;
   margin-top: 10px;
@@ -223,10 +227,6 @@ img.ringbell:hover {
 .message {
   margin-top: 20px;
   width: 90%;
-}
-
-.message:hover {
-  box-shadow: 6px 6px 6px 0px rgba(77, 76, 77, 1);
 }
 
 @media only screen and (max-width: 640px) {
