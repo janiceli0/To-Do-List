@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     checkNum(messageBox);
     const taskValue = taskInput.value;
     const priorityValue = prioritySelect.value;
-    console.log(priorityValue);
+
     const priorityParagraph = document.createElement("p");
     priorityParagraph.append(priorityValue);
 
@@ -41,28 +41,31 @@ document.addEventListener("DOMContentLoaded", function () {
     tagDiv.append(priorityParagraph, removebtn);
 
     const taskParagraph = document.createElement("p");
-    taskParagraph.append(taskValue);
-
-    const messageDiv = document.createElement("div");
-    messageDiv.classList.add("message");
-    messageDiv.append(tagDiv, taskParagraph);
-
-    const container = document.querySelector(".container2");
-    messageBox++;
-    container.append(messageDiv);
-
-    //change tag color
-    if (priorityValue === "High") {
-      priorityParagraph.style.backgroundColor = "rgb(128, 61, 59)";
-      messageDiv.style.order = "-2";
-    } else if (priorityValue === "Medium") {
-      priorityParagraph.style.backgroundColor = "rgb(175, 130, 96)";
-      messageDiv.style.order = "-1";
+    if (taskValue.length == 0) {
+      alert("Please fill in the task.");
     } else {
-      priorityParagraph.style.backgroundColor = "rgb(228, 197, 158)";
-      messageDiv.style.order = "0";
-    }
+      taskParagraph.append(taskValue);
 
+      const messageDiv = document.createElement("div");
+      messageDiv.classList.add("message");
+      messageDiv.append(tagDiv, taskParagraph);
+
+      const container = document.querySelector(".container2");
+      messageBox++;
+      container.append(messageDiv);
+
+      //change tag color
+      if (priorityValue === "High") {
+        priorityParagraph.style.backgroundColor = "rgb(128, 61, 59)";
+        messageDiv.style.order = "-2";
+      } else if (priorityValue === "Medium") {
+        priorityParagraph.style.backgroundColor = "rgb(175, 130, 96)";
+        messageDiv.style.order = "-1";
+      } else {
+        priorityParagraph.style.backgroundColor = "rgb(228, 197, 158)";
+        messageDiv.style.order = "0";
+      }
+    }
     //alarm
     alarm.addEventListener("click", function () {
       alarm.style.filter = "grayscale(0%)";
